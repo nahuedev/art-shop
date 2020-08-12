@@ -103,6 +103,10 @@ main .grilla-principal .content-prod .prod-info .agregar-carrito {
   cursor: pointer;
 }
 
+main .grilla-principal .content-prod .prod-info .red {
+  color: red;
+}
+
 main .grilla-principal .content-prod .prod-info i {
   cursor: pointer;
 }

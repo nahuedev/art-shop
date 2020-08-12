@@ -81,7 +81,7 @@ for(i=0;i< productos.length;i++){
  heart.addEventListener('click',addFav)
 
 
- 
+
 function agregarCarro(e){
     e.preventDefault()
      if (e.target.classList.contains('agregar-carrito')){
@@ -98,7 +98,8 @@ function addFav(e){
     if (e.target.classList.contains('fa-heart')){
        const favorito = e.target.parentElement.parentElement
        let corazon=favorito.querySelector('i')
-       corazon.style.color='red'
-      console.log(corazon)
+       corazon.classList.toggle('red')
+      
    }
 }
+
