@@ -1,0 +1,109 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    nav{
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 40px;
+        padding-top: 50px;
+        margin-bottom: 20px;
+        border-bottom: 2px solid rgba(185, 184, 184, 0.548);
+        width: 90%;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        ul li {
+            display: inline;
+            margin-right:20px;
+            
+            a{
+                text-decoration: none;
+
+            }
+        }
+
+        .carrito{
+            width: 60px;
+            height: 30px;
+            border-radius: 5px;
+            background-color: #000000;
+            box-shadow: none;
+            border: none;
+            cursor: pointer;
+
+            i{
+                color: #fff;
+            }
+        }
+
+
+        #lista-carrito{
+            display: none;
+        }
+    }
+
+    
+}
+
+main{
+
+    .grilla-principal{
+        margin-top: 30px;
+          margin-left: auto;
+          margin-right: auto;
+          padding-left: 100px;
+          padding-right: 100px; 
+          
+
+          .card-producto{
+            max-width: 300px;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-gap: 50px;
+
+            img{
+                width: 300px
+                
+            }
+            
+            
+          }
+
+
+          .content-prod{
+             
+
+              .prod-info{
+                border-bottom: 1px solid rgba(185, 184, 184, 0.548);
+                border-left: 1px solid rgba(185, 184, 184, 0.548); 
+                border-right: 1px solid rgba(185, 184, 184, 0.548);
+                padding: 16px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+                .agregar-carrito{
+                    margin-top: 15px;
+                    background-color: black;
+                    color: white;
+                    font-size: 16px;
+                    padding: 5px;
+                    box-shadow: none;
+                    border: none;
+                    cursor: pointer;
+                }
+                i{
+                    cursor: pointer;
+                }
+                
+              }
+          }
+    }
+}

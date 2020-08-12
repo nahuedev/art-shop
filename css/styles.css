@@ -1,0 +1,109 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header nav {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 40px;
+  padding-top: 50px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid rgba(185, 184, 184, 0.548);
+  width: 90%;
+  height: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+}
+
+header nav .carrito {
+  width: 60px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #000000;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+  cursor: pointer;
+}
+
+header nav .carrito i {
+  color: #fff;
+}
+
+header nav #lista-carrito {
+  display: none;
+}
+
+main .grilla-principal {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+main .grilla-principal .card-producto {
+  max-width: 300px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+}
+
+main .grilla-principal .card-producto img {
+  width: 300px;
+}
+
+main .grilla-principal .content-prod .prod-info {
+  border-bottom: 1px solid rgba(185, 184, 184, 0.548);
+  border-left: 1px solid rgba(185, 184, 184, 0.548);
+  border-right: 1px solid rgba(185, 184, 184, 0.548);
+  padding: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .grilla-principal .content-prod .prod-info .agregar-carrito {
+  margin-top: 15px;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  padding: 5px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+  cursor: pointer;
+}
+
+main .grilla-principal .content-prod .prod-info i {
+  cursor: pointer;
+}
+/*# sourceMappingURL=styles.css.map */
