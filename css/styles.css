@@ -36,7 +36,7 @@ header nav ul li a {
   text-decoration: none;
 }
 
-header nav .carrito {
+header nav ul li .carrito {
   width: 60px;
   height: 30px;
   border-radius: 5px;
@@ -47,12 +47,80 @@ header nav .carrito {
   cursor: pointer;
 }
 
-header nav .carrito i {
+header nav ul li .carrito i {
   color: #fff;
 }
 
-header nav #lista-carrito {
+header nav ul li .lista-carrito {
+  position: absolute;
+  right: 5%;
+  top: 10%;
+  background-color: #252525;
+  border: 1px solid black;
+  width: 500px;
+  max-height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+header nav ul li .lista-carrito .articulo {
+  width: 100%;
+  color: honeydew;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
+
+header nav ul li .lista-carrito .articulo .art-info {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+header nav ul li .lista-carrito .articulo .art-info i {
+  cursor: pointer;
+}
+
+header nav ul li .lista-carrito img {
+  width: 60px;
+  height: 60px;
+}
+
+header nav ul li .off {
   display: none;
+}
+
+header nav ul li .vaciar-carro {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  border: solid 1px #ffff;
+  color: #fff;
+  background-color: transparent;
 }
 
 main .grilla-principal {

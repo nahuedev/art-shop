@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,36 +9,58 @@
     <title>Carrito</title>
     <script src="https://kit.fontawesome.com/894963c3a7.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
 
     <header>
         <nav>
             <div class="logo"><a href=""><img src="logo.png" alt=""></a></div>
             <ul>
-                
+
                 <li><a href="">Favoritos</a></li>
                 <li>
-                    <button class="carrito"><i class="fas fa-shopping-cart"></i>
+                    <button id ='carrito'class="carrito"><i class="fas fa-shopping-cart"></i>
                     </button>
-                    <div id="lista-carrito">
-                </div>    
-                
-                
+                    <div id="lista-carrito" class="lista-carrito off">
+                        <!-- <div class="articulo">
+                            <img src="img/ilustracion-1.jpeg" alt="">
+                            <div class="art-info">
+                                <p>Nombre</p>
+                                <p>Precio</p>
+                            </div>
+                        </div>
+
+                        <div class="articulo">
+                            <img src="img/ilustracion-1.jpeg" alt="">
+                            <div class="art-info">
+                                <p>Nombre</p>
+                                <p>Precio</p>
+                            </div>
+                        </div> -->
+
+                        <button id="vaciar-carro" class="vaciar-carro">
+                            Vaciar Carrito
+                        </button>
+                        
+                    </div>
+
+
                 </li>
             </ul>
         </nav>
     </header>
-    
-    <main  class="contenedor" >
+
+    <main class="contenedor">
         <div class="grilla-principal" id="lista-productos">
             <div class="card-producto" id="card-producto">
-               
-               
+
+
             </div>
-           
-        </div> 
+
+        </div>
     </main>
 
-<script src="js/app.js"></script>
+    <script src="js/app.js"></script>
 </body>
+
 </html>
