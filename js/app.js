@@ -131,4 +131,26 @@ function insertarCarrito(data) {
      `;
   div.innerHTML = html;
   document.getElementById("lista-carrito").insertBefore(div,vaciar)
+
+  guardarLocalStorage(data)
+
+}
+
+function guardarLocalStorage(data){
+    let dataLS
+    dataLS = obtenerDataLocalStorage()
+    dataLS.push(data)
+    localStorage.setItem('dataLS',JSON.stringify(dataLS))
+
+}
+
+function obtenerDataLocalStorage(){
+    let dataLS;
+    if(localStorage.getItem('dataLS') === null){
+        dataLS=[]
+    } else {
+        dataLS =JSON.parse(localStorage.getItem('dataLS'))
+    }
+    return dataLS
+
 }
