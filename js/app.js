@@ -75,6 +75,8 @@ heart.addEventListener("click", addFav);
 
 carrito.addEventListener("click", mostrarLista);
 
+document.addEventListener("DOMContentLoaded", leerLocalStore);
+
 function agregarCarro(e) {
   e.preventDefault();
   if (e.target.classList.contains("agregar-carrito")) {
@@ -116,7 +118,7 @@ function mostrarLista(e) {
 
 function insertarCarrito(data) {
   let html = "";
-  let vaciar=document.getElementById('vaciar-carro')
+  let vaciar = document.getElementById("vaciar-carro");
   let div = document.createElement("div");
   div.classList.add("articulo");
 
@@ -130,27 +132,49 @@ function insertarCarrito(data) {
      
      `;
   div.innerHTML = html;
-  document.getElementById("lista-carrito").insertBefore(div,vaciar)
+  document.getElementById("lista-carrito").insertBefore(div, vaciar);
 
-  guardarLocalStorage(data)
-
+  guardarLocalStorage(data);
 }
 
-function guardarLocalStorage(data){
-    let dataLS
-    dataLS = obtenerDataLocalStorage()
-    dataLS.push(data)
-    localStorage.setItem('dataLS',JSON.stringify(dataLS))
-
+function guardarLocalStorage(data) {
+  let dataLS;
+  dataLS = obtenerDataLocalStorage();
+  dataLS.push(data);
+  localStorage.setItem("dataLS", JSON.stringify(dataLS));
 }
 
-function obtenerDataLocalStorage(){
-    let dataLS;
-    if(localStorage.getItem('dataLS') === null){
-        dataLS=[]
-    } else {
-        dataLS =JSON.parse(localStorage.getItem('dataLS'))
-    }
-    return dataLS
+function obtenerDataLocalStorage() {
+  let dataLS;
+  if (localStorage.getItem("dataLS") === null) {
+    dataLS = [];
+  } else {
+    dataLS = JSON.parse(localStorage.getItem("dataLS"));
+  }
+  return dataLS;
+}
 
+function leerLocalStore() {
+  let dataLS;
+
+  dataLS = obtenerDataLocalStorage();
+
+  dataLS.forEach((data) => {
+    let html = "";
+    let vaciar = document.getElementById("vaciar-carro");
+    let div = document.createElement("div");
+    div.classList.add("articulo");
+
+    html = `
+     <img src="${data.imagen}" alt="">
+     <div class="art-info">
+         <p>${data.titulo}</p>
+         <p>${data.precio}</p>
+         <span><i class="fas fa-trash"></i></span>
+     </div>
+     
+     `;
+    div.innerHTML = html;
+    document.getElementById("lista-carrito").insertBefore(div, vaciar);
+  });
 }
